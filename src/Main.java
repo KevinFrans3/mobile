@@ -5,14 +5,15 @@ public class Main {
 		//kek
 		
 		Branch a = new Branch(2,2);
-		Branch b = new Branch(1,2);
+		Branch b = new Branch(2,2);
 		Mobile ab = new Mobile(a,b);
 		Branch abd = new Branch(2,ab);
-		Branch c = new Branch(4,3);
+		Branch c = new Branch(4,2);
 		Mobile total = new Mobile(abd,c);
 		
 		
 		System.out.println(total.totalWeight());
+		System.out.println(total.isBalanced());
 		
 		
 		

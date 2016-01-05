@@ -43,7 +43,6 @@ public class Mobile {
 	{
 		if(left.getTorque() == right.getTorque())
 		{
-			boolean balanced = true;
 			if(!left.getIsWeight())
 			{
 				if(!left.getMobile().isBalanced())
@@ -58,7 +57,11 @@ public class Mobile {
 					return false;
 				}
 			}
+			
+			return true;
 		}
+		
+		return false;
 	}
 
 	public Branch getLeft()
