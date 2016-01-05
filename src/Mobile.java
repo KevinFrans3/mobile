@@ -4,10 +4,10 @@ public class Mobile {
 	Branch left;
 	Branch right;
 	
-	public Mobile()
+	public Mobile(Branch l, Branch r)
 	{
-		left = new Branch();
-		right = new Branch();
+		left = l;
+		right = r;
 	}
 	
 	public Branch getLeft()

@@ -7,9 +7,18 @@ public class Branch {
 	public int weight;
 	public Mobile mobile;
 	
-	public Branch()
+	public Branch(int l, int w)
 	{
-		
+		length = l;
+		weight = w;
+		isWeight = true;
+	}
+	
+	public Branch(int l, Mobile m)
+	{
+		length = l;
+		mobile = m;
+		isWeight = false;
 	}
 	
 	public int getLength()
