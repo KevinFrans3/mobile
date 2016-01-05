@@ -40,11 +40,18 @@ public class Branch {
 	{
 		return mobile;
 	}
-	
+
 	public int getTorque()
 	{
-		int torque = weight * length;
-		return torque;
+
+		if(isWeight){
+			int torque = weight * length;
+			return torque;
+		}
+		else{
+			int torque = mobile.totalWeight() * length;
+			return torque;
+		}
 	}
 
 
