@@ -40,6 +40,12 @@ public class Branch {
 	{
 		return mobile;
 	}
+	
+	public int getTorque()
+	{
+		int torque = weight * length;
+		return torque;
+	}
 
 
 

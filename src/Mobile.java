@@ -30,6 +30,8 @@ public class Mobile {
 		return leftWeight + rightWeight;
 
 	}
+	
+
 
 	public Mobile(Branch l, Branch r)
 	{
