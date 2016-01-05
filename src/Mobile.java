@@ -4,6 +4,7 @@ public class Mobile {
 	Branch left;
 	Branch right;
 	
+	
 	public Mobile(Branch l, Branch r)
 	{
 		left = l;
