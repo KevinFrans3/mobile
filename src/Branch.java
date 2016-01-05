@@ -1,13 +1,17 @@
 
 public class Branch {
-	int length;
-	boolean isWeight = false;
-	int weight;
-	Mobile mobile;
+	
+	public int length;
+	
+	public boolean isWeight = false;
+	public int weight;
+	public Mobile mobile;
 	
 	public Branch()
 	{
 		
 	}
+	
+	
 
 }

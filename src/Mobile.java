@@ -1,8 +1,8 @@
 
 public class Mobile {
 	
-	Branch left;
-	Branch right;
+	public Branch left;
+	public Branch right;
 	
 	public Mobile()
 	{
