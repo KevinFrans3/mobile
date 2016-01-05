@@ -3,22 +3,12 @@ public class Branch {
 
 	public int length;
 
-	public boolean isWeight = false;
-	public int weight;
-	public Mobile mobile;
+	public Structure struct;
 
-	public Branch(int l, int w)
+	public Branch(int l, Structure s)
 	{
 		length = l;
-		weight = w;
-		isWeight = true;
-	}
-
-	public Branch(int l, Mobile m)
-	{
-		length = l;
-		mobile = m;
-		isWeight = false;
+		struct = s;
 	}
 
 	public int getLength()
@@ -26,32 +16,14 @@ public class Branch {
 		return length;
 	}
 
-	public boolean getIsWeight()
+	public Structure getStructure()
 	{
-		return isWeight;
-	}
-
-	public int getWeight()
-	{
-		return weight;
-	}
-
-	public Mobile getMobile()
-	{
-		return mobile;
+		return struct;
 	}
 
 	public int getTorque()
-	{
-
-		if(isWeight){
-			int torque = weight * length;
-			return torque;
-		}
-		else{
-			int torque = mobile.totalWeight() * length;
-			return torque;
-		}
+	{	
+		return struct.getWeight() * length;
 	}
 
 

@@ -1,33 +1,13 @@
 
-public class Mobile {
+public class Mobile implements Structure{
 
 	Branch left;
 	Branch right;
 
-	public int totalWeight()
+	public int getWeight()
 	{
-		int leftWeight;
-		int rightWeight;
 
-		if(left.isWeight)
-		{
-			leftWeight = left.getWeight();
-		}
-		else
-		{
-			leftWeight = left.getMobile().totalWeight();
-		}
-
-		if(right.isWeight)
-		{
-			rightWeight = right.getWeight();
-		}
-		else
-		{
-			rightWeight = right.getMobile().totalWeight();
-		}
-
-		return leftWeight + rightWeight;
+		return left.struct.getWeight() + right.struct.getWeight();
 
 	}
 	
@@ -43,22 +23,13 @@ public class Mobile {
 	{
 		if(left.getTorque() == right.getTorque())
 		{
-			if(!left.getIsWeight())
+			if(left.struct.isBalanced())
 			{
-				if(!left.getMobile().isBalanced())
+				if(right.struct.isBalanced())
 				{
-					return false;
+					return true;
 				}
 			}
-			if(!right.getIsWeight())
-			{
-				if(!right.getMobile().isBalanced())
-				{
-					return false;
-				}
-			}
-			
-			return true;
 		}
 		
 		return false;
