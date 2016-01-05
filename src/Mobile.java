@@ -1,6 +1,9 @@
 
 public class Mobile implements Structure{
 
+//William Park and Kevin Frans
+
+
 	Branch left;
 	Branch right;
 

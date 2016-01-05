@@ -1,6 +1,6 @@
-
+//William Park and Kevin Frans
 public class Branch {
-
+	
 	public int length;
 
 	public Structure struct;
