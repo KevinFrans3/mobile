@@ -4,6 +4,33 @@ public class Mobile {
 	Branch left;
 	Branch right;
 	
+	public int totalWeight()
+	{
+		int leftWeight;
+		int rightWeight;
+		
+		if(left.isWeight)
+		{
+			leftWeight = left.getWeight();
+		}
+		else
+		{
+			leftWeight = left.getMobile().totalWeight();
+		}
+		
+		if(right.isWeight)
+		{
+			rightWeight = right.getWeight();
+		}
+		else
+		{
+			rightWeight = right.getMobile().totalWeight();
+		}
+		
+		return leftWeight + rightWeight;
+			
+	}
+	
 	public Mobile(Branch l, Branch r)
 	{
 		left = l;
