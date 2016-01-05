@@ -36,6 +36,28 @@ public class Mobile {
 		left = l;
 		right = r;
 	}
+	
+	public boolean isBalanced()
+	{
+		if(left.getTorque() == right.getTorque())
+		{
+			boolean balanced = true;
+			if(!left.getIsWeight())
+			{
+				if(!left.getMobile().isBalanced())
+				{
+					return false;
+				}
+			}
+			if(!right.getIsWeight())
+			{
+				if(!right.getMobile().isBalanced())
+				{
+					return false;
+				}
+			}
+		}
+	}
 
 	public Branch getLeft()
 	{
